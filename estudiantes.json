@@ -1,0 +1,36 @@
+{
+    "estudiantes": [
+        {
+            "id": 1,
+            "nombre": "Andrés",
+            "apellido": "Gabaldón",
+            "edad": 32,
+            "nota": 20,
+            "mencion": "Sobresaliente"
+        },
+        {
+            "id": 2,
+            "nombre": "Paola",
+            "apellido": "Giménez",
+            "edad": 26,
+            "nota": 16,
+            "mencion": "Excelente"
+        },
+        {
+            "id": 3,
+            "nombre": "Melanie",
+            "apellido": "Martínez O'Brian",
+            "edad": 18,
+            "nota": 8,
+            "mencion": "--"
+        },
+        {
+            "id": 4,
+            "nombre": "Francisco Luis",
+            "apellido": "Guillermo",
+            "edad": 36,
+            "nota": 18,
+            "mencion": "Sobresaliente"
+        }
+    ]
+}

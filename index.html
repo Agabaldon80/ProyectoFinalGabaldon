@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Mulish:wght@300..600&display=swap" rel="stylesheet"> 
+    
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>PreEntrega2Gabaldon</title>
+</head>
+<body>
+    <img class="logo" src="./logo.svg">
+    <img class="logo-outline" src="./logo-outline.svg">
+    <div class="gradient" id="gradient">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <main>
+        <h1 class="display-4"><span>Bienvenido a</span><br/>Eleusis</h1>
+        <p class="copete mb-5 mt-5">
+            Bienvenido al calculador de notas Eleusis, el cual le permite determinar el promedio de los estudiantes en su curso y si el mismo ha obtenido una mención. Para conocer el sistema de notación y las posibles menciones, cargue la información de los estudiantes y verá la información actualizándose en tiempo real.
+        </p>
+        <form id="cargar" method="get" class="row g-3 p-3 pt-1 needs-validation"/>
+
+            <div class="col-md-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" value="" required>
+                <div class="valid-feedback">
+                ¡Genial!
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido" value="" required>
+                <div class="valid-feedback">
+                ¡Genial!
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label for="edad" class="form-label">Edad</label>
+                <input type="number" class="form-control" id="edad" required>
+                <div class="invalid-feedback">
+                  Por favor ingresar una edad válida (mayor de 18 años).
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label for="nota" class="form-label">Nota</label>
+                <input type="number" class="form-control" id="nota" required>
+                <div class="invalid-feedback">
+                  Por favor ingresar una nota válida (entre 1 y 20).
+                </div>
+            </div>
+
+            <input type="submit" class="col-md-2 button btn-cargar" value="Cargar estudiante" />
+        </form>
+        <div class="cards">
+            <div class="card col-md-3">
+                <p id="promNota">
+                    -
+                </p>
+                <p class="cardInfo">
+                    Es el promedio de notas de este curso.
+                </p>
+                <span class="material-symbols-outlined icon-card">
+                    grade
+                </span>
+            </div>
+            <div class="card col-md-3">
+                <p id="promEdad">
+                    -
+                </p>
+                <p class="cardInfo">
+                    Es el promedio de edades de alumnos de este curso.
+                </p>
+                <span class="material-symbols-outlined icon-card">
+                    account_circle
+                </span>
+            </div>
+            <div class="card col-md-3">
+                <p id="maxNota">
+                    -
+                </p>
+                <p class="cardInfo">
+                    Es la nota máxima alcanzada por los alumnos de este curso.
+                </p>
+                <span class="material-symbols-outlined icon-card">
+                    keyboard_double_arrow_up
+                </span>
+            </div>
+            <div class="card col-md-3">
+                <p id="minNota">
+                    -
+                </p>
+                <p class="cardInfo">
+                    Es la nota mínima alcanzada por los alumnos de este curso.
+                </p>
+                <span class="material-symbols-outlined icon-card">
+                    keyboard_double_arrow_down
+                </span>
+            </div>
+        </div>
+        <table id="tabla" class="table col-md-12">
+            <thead>
+                <td><button onclick="ordenarPor('id')">ID</button></td>
+                <td><button onclick="ordenarPor('nombre')">Nombre</button></td>
+                <td><button onclick="ordenarPor('apellido')">Apellido</button></td>
+                <td><button onclick="ordenarPor('edad')">Edad</button></td>
+                <td><button onclick="ordenarPor('nota')">Nota</button></td>
+                <td><button onclick="ordenarPor('mencion')">Mención</button></td>
+            </thead>
+        </table>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
